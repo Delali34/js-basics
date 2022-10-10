@@ -197,6 +197,8 @@ function render(){
     else if(result ===21){
         message = "You've got a blackjack"
         hasBlackJack = true
+        player.chips += 5
+        playerEl.textContent = player.name + ':' + ' $' + player.chips
 
     }else{message = 'You are out of the game'
         isActive = false    
@@ -223,8 +225,9 @@ function newcard(){
 }
 let player = {
     name: 'Dela',
-    chips: 145
+    chips: 0
 }
+
 playerEl.textContent = player.name + ':' + ' $' + player.chips
 
 let airbnb = {
